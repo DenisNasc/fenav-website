@@ -1,7 +1,7 @@
 import React from 'react';
 
 function App() {
-  return <div id="App">FENAV</div>;
+  return <div data-testid="App">FENAV</div>;
 }
 
 export default App;

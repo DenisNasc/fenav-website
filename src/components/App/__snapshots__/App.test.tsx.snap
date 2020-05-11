@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component should match to the snapshot 1`] = `
+<div
+  data-testid="App"
+>
+  FENAV
+</div>
+`;
