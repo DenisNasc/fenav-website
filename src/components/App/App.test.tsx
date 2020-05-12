@@ -12,11 +12,6 @@ describe('App Component', () => {
     ReactDOM.render(<App />, div);
   });
 
-  test('should render the text FENAV as a children', () => {
-    const {getByTestId} = render(<App />);
-    expect(getByTestId('App')).toHaveTextContent('FENAV');
-  });
-
   test('should match to the snapshot', () => {
     const tree = renderer.create(<App />).toJSON();
     expect(tree).toMatchSnapshot();

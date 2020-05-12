@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should match to the snapshot 1`] = `
+<header
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary makeStyles-header-1 MuiPaper-elevation4"
+  data-testid="Header"
+>
+  <div
+    className="MuiContainer-root makeStyles-container-2 MuiContainer-maxWidthLg"
+  >
+    <svg
+      className="makeStyles-logo-4"
+    >
+      FENAV.svg
+    </svg>
+    <p
+      className="MuiTypography-root makeStyles-title-3 MuiTypography-body1"
+      data-testid="header-title"
+    >
+      Faculdade de Engenharia Naval
+    </p>
+  </div>
+  <div
+    className="MuiTabs-root makeStyles-categoriesContainer-5"
+  >
+    <div
+      className="MuiTabs-scroller MuiTabs-fixed"
+      onScroll={[Function]}
+      style={
+        Object {
+          "marginBottom": null,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        aria-label="simple tabs example"
+        className="MuiTabs-flexContainer"
+        onKeyDown={[Function]}
+        role="tablist"
+      >
+        <button
+          aria-controls="simple-ItemHeader-0"
+          aria-selected={true}
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit Mui-selected"
+          data-testid="categorie-1"
+          disabled={false}
+          id="simple-tab-0"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            A Faculdade
+          </span>
+          <span
+            className="PrivateTabIndicator-root-108 PrivateTabIndicator-colorSecondary-110 MuiTabs-indicator"
+            style={Object {}}
+          />
+        </button>
+        <button
+          aria-controls="simple-ItemHeader-1"
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit"
+          data-testid="categorie-2"
+          disabled={false}
+          id="simple-tab-1"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Como Ingressar
+          </span>
+        </button>
+        <button
+          aria-controls="simple-ItemHeader-2"
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit"
+          data-testid="categorie-3"
+          disabled={false}
+          id="simple-tab-2"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Notícias
+          </span>
+        </button>
+        <button
+          aria-controls="simple-ItemHeader-3"
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit"
+          data-testid="categorie-4"
+          disabled={false}
+          id="simple-tab-3"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Publicações
+          </span>
+        </button>
+        <button
+          aria-controls="simple-ItemHeader-4"
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit"
+          data-testid="categorie-5"
+          disabled={false}
+          id="simple-tab-4"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Pós-Graduação
+          </span>
+        </button>
+        <button
+          aria-controls="simple-ItemHeader-5"
+          aria-selected={false}
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit"
+          data-testid="categorie-6"
+          disabled={false}
+          id="simple-tab-5"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="tab"
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiTab-wrapper"
+          >
+            Área do Aluno
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+`;
