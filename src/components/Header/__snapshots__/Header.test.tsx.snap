@@ -2,7 +2,7 @@
 
 exports[`Header Component should match to the snapshot 1`] = `
 <header
-  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary makeStyles-header-1 MuiPaper-elevation4"
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-header-1 mui-fixed MuiPaper-elevation4"
   data-testid="Header"
 >
   <div
@@ -42,7 +42,7 @@ exports[`Header Component should match to the snapshot 1`] = `
         <button
           aria-controls="simple-ItemHeader-0"
           aria-selected={true}
-          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit Mui-selected"
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-6 MuiTab-textColorInherit Mui-selected"
           data-testid="categorie-1"
           disabled={false}
           id="simple-tab-0"
@@ -75,7 +75,7 @@ exports[`Header Component should match to the snapshot 1`] = `
         <button
           aria-controls="simple-ItemHeader-1"
           aria-selected={false}
-          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit"
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-6 MuiTab-textColorInherit"
           data-testid="categorie-2"
           disabled={false}
           id="simple-tab-1"
@@ -104,7 +104,7 @@ exports[`Header Component should match to the snapshot 1`] = `
         <button
           aria-controls="simple-ItemHeader-2"
           aria-selected={false}
-          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit"
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-6 MuiTab-textColorInherit"
           data-testid="categorie-3"
           disabled={false}
           id="simple-tab-2"
@@ -133,7 +133,7 @@ exports[`Header Component should match to the snapshot 1`] = `
         <button
           aria-controls="simple-ItemHeader-3"
           aria-selected={false}
-          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit"
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-6 MuiTab-textColorInherit"
           data-testid="categorie-4"
           disabled={false}
           id="simple-tab-3"
@@ -162,7 +162,7 @@ exports[`Header Component should match to the snapshot 1`] = `
         <button
           aria-controls="simple-ItemHeader-4"
           aria-selected={false}
-          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit"
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-6 MuiTab-textColorInherit"
           data-testid="categorie-5"
           disabled={false}
           id="simple-tab-4"
@@ -191,7 +191,7 @@ exports[`Header Component should match to the snapshot 1`] = `
         <button
           aria-controls="simple-ItemHeader-5"
           aria-selected={false}
-          className="MuiButtonBase-root MuiTab-root makeStyles-categorie-6 MuiTab-textColorInherit"
+          className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-6 MuiTab-textColorInherit"
           data-testid="categorie-6"
           disabled={false}
           id="simple-tab-5"

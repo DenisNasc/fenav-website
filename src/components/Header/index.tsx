@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
 import {AppBar, Container, Tabs, Tab, Typography} from '@material-ui/core';
 
@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      height: '100%',
+      height: '70px',
     },
     container: {
       display: 'flex',
@@ -36,15 +36,35 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingRight: '20px',
       alignItems: 'center',
     },
-    categorie: {
+    categorieButton: {
       padding: '0px',
-      height: '80px',
+      height: '70px',
       marginRight: '5px',
     },
   })
 );
 
 const Header = () => {
+  const [value, setValue] = useState<null | number>(null);
+  const classes = useStyles();
+
+  useEffect(() => {
+    if (typeof value !== 'number') {
+      document.title = 'FENAV – Faculdade de Engenharia Naval';
+      return;
+    }
+    const pageTitles = [
+      'A Faculdade',
+      'Como Ingressar',
+      'Notícias',
+      'Publicações',
+      'Pós-Graduação',
+      'Área do Aluno',
+    ];
+
+    document.title = `${pageTitles[value]} – FENAV`;
+  }, [value]);
+
   const a11yProps = (index: any) => {
     return {
       id: `simple-tab-${index}`,
@@ -56,11 +76,8 @@ const Header = () => {
     setValue(newValue);
   };
 
-  const [value, setValue] = useState(0);
-  const classes = useStyles();
-
   return (
-    <AppBar data-testid="Header" className={classes.header} position="static">
+    <AppBar data-testid="Header" className={classes.header} position="fixed">
       <Container classes={{root: classes.container}}>
         <Logo className={classes.logo} />
         <Typography classes={{root: classes.title}} data-testid="header-title">
@@ -69,43 +86,43 @@ const Header = () => {
       </Container>
       <Tabs
         classes={{root: classes.categoriesContainer}}
-        value={value}
+        value={value || 0}
         onChange={handleChange}
         aria-label="simple tabs example"
       >
         <Tab
           data-testid="categorie-1"
-          classes={{root: classes.categorie}}
+          classes={{root: classes.categorieButton}}
           label="A Faculdade"
           {...a11yProps(0)}
         />
         <Tab
           data-testid="categorie-2"
-          classes={{root: classes.categorie}}
+          classes={{root: classes.categorieButton}}
           label="Como Ingressar"
           {...a11yProps(1)}
         />
         <Tab
           data-testid="categorie-3"
-          classes={{root: classes.categorie}}
+          classes={{root: classes.categorieButton}}
           label="Notícias"
           {...a11yProps(2)}
         />
         <Tab
           data-testid="categorie-4"
-          classes={{root: classes.categorie}}
+          classes={{root: classes.categorieButton}}
           label="Publicações"
           {...a11yProps(3)}
         />
         <Tab
           data-testid="categorie-5"
-          classes={{root: classes.categorie}}
+          classes={{root: classes.categorieButton}}
           label="Pós-Graduação"
           {...a11yProps(4)}
         />
         <Tab
           data-testid="categorie-6"
-          classes={{root: classes.categorie}}
+          classes={{root: classes.categorieButton}}
           label="Área do Aluno"
           {...a11yProps(5)}
         />

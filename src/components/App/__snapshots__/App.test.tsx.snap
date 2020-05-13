@@ -2,13 +2,13 @@
 
 exports[`App Component should match to the snapshot 1`] = `
 <div
-  className="MuiGrid-root makeStyles-gridContainer-1 MuiGrid-container MuiGrid-spacing-xs-2"
+  className="MuiGrid-root makeStyles-gridContainer-1 MuiGrid-container"
 >
   <div
     className="MuiGrid-root makeStyles-gridHeader-2 MuiGrid-item MuiGrid-grid-xs-12"
   >
     <header
-      className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary makeStyles-header-108 MuiPaper-elevation4"
+      className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-header-108 mui-fixed MuiPaper-elevation4"
       data-testid="Header"
     >
       <div
@@ -48,7 +48,7 @@ exports[`App Component should match to the snapshot 1`] = `
             <button
               aria-controls="simple-ItemHeader-0"
               aria-selected={true}
-              className="MuiButtonBase-root MuiTab-root makeStyles-categorie-113 MuiTab-textColorInherit Mui-selected"
+              className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-113 MuiTab-textColorInherit Mui-selected"
               data-testid="categorie-1"
               disabled={false}
               id="simple-tab-0"
@@ -81,7 +81,7 @@ exports[`App Component should match to the snapshot 1`] = `
             <button
               aria-controls="simple-ItemHeader-1"
               aria-selected={false}
-              className="MuiButtonBase-root MuiTab-root makeStyles-categorie-113 MuiTab-textColorInherit"
+              className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-113 MuiTab-textColorInherit"
               data-testid="categorie-2"
               disabled={false}
               id="simple-tab-1"
@@ -110,7 +110,7 @@ exports[`App Component should match to the snapshot 1`] = `
             <button
               aria-controls="simple-ItemHeader-2"
               aria-selected={false}
-              className="MuiButtonBase-root MuiTab-root makeStyles-categorie-113 MuiTab-textColorInherit"
+              className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-113 MuiTab-textColorInherit"
               data-testid="categorie-3"
               disabled={false}
               id="simple-tab-2"
@@ -139,7 +139,7 @@ exports[`App Component should match to the snapshot 1`] = `
             <button
               aria-controls="simple-ItemHeader-3"
               aria-selected={false}
-              className="MuiButtonBase-root MuiTab-root makeStyles-categorie-113 MuiTab-textColorInherit"
+              className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-113 MuiTab-textColorInherit"
               data-testid="categorie-4"
               disabled={false}
               id="simple-tab-3"
@@ -168,7 +168,7 @@ exports[`App Component should match to the snapshot 1`] = `
             <button
               aria-controls="simple-ItemHeader-4"
               aria-selected={false}
-              className="MuiButtonBase-root MuiTab-root makeStyles-categorie-113 MuiTab-textColorInherit"
+              className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-113 MuiTab-textColorInherit"
               data-testid="categorie-5"
               disabled={false}
               id="simple-tab-4"
@@ -197,7 +197,7 @@ exports[`App Component should match to the snapshot 1`] = `
             <button
               aria-controls="simple-ItemHeader-5"
               aria-selected={false}
-              className="MuiButtonBase-root MuiTab-root makeStyles-categorie-113 MuiTab-textColorInherit"
+              className="MuiButtonBase-root MuiTab-root makeStyles-categorieButton-113 MuiTab-textColorInherit"
               data-testid="categorie-6"
               disabled={false}
               id="simple-tab-5"
@@ -240,11 +240,62 @@ exports[`App Component should match to the snapshot 1`] = `
   <div
     className="MuiGrid-root makeStyles-gridFooter-4 MuiGrid-item MuiGrid-grid-xs-12"
   >
-    <div
-      data-testid="App"
+    <footer
+      className="MuiPaper-root MuiAppBar-root makeStyles-footer-219 MuiAppBar-positionFixed MuiAppBar-colorSecondary mui-fixed MuiPaper-elevation0"
     >
-      FOOTER
-    </div>
+      <div
+        className="MuiContainer-root makeStyles-websitesContainer-220 MuiContainer-maxWidthLg"
+      >
+        <div
+          className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+        >
+          <a
+            className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="https://portal.ufpa.br/"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Site da Universidade Federal do Pará (UFPA)
+          </a>
+        </div>
+        <div
+          className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+        >
+          <a
+            className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="www.itec.ufpa.br"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            Site do Instituto de Tecnologia da UFPA (ITEC)
+          </a>
+        </div>
+      </div>
+      <div
+        className="MuiContainer-root makeStyles-secretariasContatosContainer-221 MuiContainer-maxWidthLg"
+      >
+        <div
+          className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+        >
+          Contato da Secretaria de Graduação (Rubenson)
+        </div>
+        <div
+          className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+        >
+          Contato da Secretaria de Pós-Graduação (Rubenson)
+        </div>
+      </div>
+      <p
+        className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+      >
+        Endereço
+      </p>
+      <p
+        className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+      >
+        Centro Acadêmico
+      </p>
+    </footer>
   </div>
 </div>
 `;
