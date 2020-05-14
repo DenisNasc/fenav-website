@@ -5,7 +5,7 @@ exports[`App Component should match to the snapshot 1`] = `
   className="MuiGrid-root makeStyles-gridContainer-1 MuiGrid-container"
 >
   <div
-    className="MuiGrid-root makeStyles-gridHeader-2 MuiGrid-item MuiGrid-grid-xs-12"
+    className="MuiGrid-root makeStyles-gridHeader-2 MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12"
   >
     <header
       className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-header-108 mui-fixed MuiPaper-elevation4"
@@ -229,72 +229,507 @@ exports[`App Component should match to the snapshot 1`] = `
     </header>
   </div>
   <div
-    className="MuiGrid-root makeStyles-gridBody-3 MuiGrid-item MuiGrid-grid-xs-12"
+    className="MuiGrid-root makeStyles-gridBody-3 MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12"
   >
-    <div
-      data-testid="App"
-    >
-      CORPO DA PÁGINA
+    <div>
+      <div
+        className="MuiDrawer-root MuiDrawer-docked makeStyles-drawer-219"
+      >
+        <div
+          className="MuiPaper-root MuiDrawer-paper makeStyles-drawerPaper-220 MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft MuiPaper-elevation0"
+          style={
+            Object {
+              "visibility": undefined,
+            }
+          }
+        >
+          <ul
+            className="MuiList-root MuiList-padding"
+          >
+            <div
+              aria-disabled={false}
+              className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+              onBlur={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                className="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 3H4.99c-1.11 0-1.98.9-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10zm-3-5h-2V7h-4v3H8l4 4 4-4z"
+                  />
+                </svg>
+              </div>
+              <div
+                className="MuiListItemText-root"
+              >
+                <span
+                  className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Inbox
+                </span>
+              </div>
+            </div>
+            <div
+              aria-disabled={false}
+              className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+              onBlur={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                className="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </div>
+              <div
+                className="MuiListItemText-root"
+              >
+                <span
+                  className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Starred
+                </span>
+              </div>
+            </div>
+            <div
+              aria-disabled={false}
+              className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+              onBlur={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                className="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 3H4.99c-1.11 0-1.98.9-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10zm-3-5h-2V7h-4v3H8l4 4 4-4z"
+                  />
+                </svg>
+              </div>
+              <div
+                className="MuiListItemText-root"
+              >
+                <span
+                  className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Send email
+                </span>
+              </div>
+            </div>
+            <div
+              aria-disabled={false}
+              className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+              onBlur={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                className="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </div>
+              <div
+                className="MuiListItemText-root"
+              >
+                <span
+                  className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Drafts
+                </span>
+              </div>
+            </div>
+          </ul>
+          <hr
+            className="MuiDivider-root"
+          />
+          <ul
+            className="MuiList-root MuiList-padding"
+          >
+            <div
+              aria-disabled={false}
+              className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+              onBlur={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                className="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 3H4.99c-1.11 0-1.98.9-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10zm-3-5h-2V7h-4v3H8l4 4 4-4z"
+                  />
+                </svg>
+              </div>
+              <div
+                className="MuiListItemText-root"
+              >
+                <span
+                  className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Inbox
+                </span>
+              </div>
+            </div>
+            <div
+              aria-disabled={false}
+              className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+              onBlur={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                className="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </div>
+              <div
+                className="MuiListItemText-root"
+              >
+                <span
+                  className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Starred
+                </span>
+              </div>
+            </div>
+            <div
+              aria-disabled={false}
+              className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+              onBlur={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                className="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 3H4.99c-1.11 0-1.98.9-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10zm-3-5h-2V7h-4v3H8l4 4 4-4z"
+                  />
+                </svg>
+              </div>
+              <div
+                className="MuiListItemText-root"
+              >
+                <span
+                  className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Send email
+                </span>
+              </div>
+            </div>
+            <div
+              aria-disabled={false}
+              className="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+              onBlur={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <div
+                className="MuiListItemIcon-root"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </div>
+              <div
+                className="MuiListItemText-root"
+              >
+                <span
+                  className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                >
+                  Drafts
+                </span>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+      EU SOU A HOMEPAGE
     </div>
   </div>
   <div
-    className="MuiGrid-root makeStyles-gridFooter-4 MuiGrid-item MuiGrid-grid-xs-12"
+    className="MuiGrid-root makeStyles-gridFooter-4 MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12"
   >
     <footer
-      className="MuiPaper-root MuiAppBar-root makeStyles-footer-219 MuiAppBar-positionFixed MuiAppBar-colorSecondary mui-fixed MuiPaper-elevation0"
+      className="MuiPaper-root MuiAppBar-root makeStyles-footer-272 MuiAppBar-positionRelative MuiAppBar-colorSecondary MuiPaper-elevation0"
     >
       <div
-        className="MuiContainer-root makeStyles-websitesContainer-220 MuiContainer-maxWidthLg"
+        className="MuiContainer-root makeStyles-sitesRelacionadosContainer-276 MuiContainer-maxWidthLg"
       >
         <div
-          className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+          className="MuiTypography-root makeStyles-title-274 MuiTypography-body1"
         >
-          <a
-            className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-            href="https://portal.ufpa.br/"
-            onBlur={[Function]}
-            onFocus={[Function]}
-          >
-            Site da Universidade Federal do Pará (UFPA)
-          </a>
+          Sites Relacionados
         </div>
         <div
-          className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+          className="MuiContainer-root makeStyles-sitesRelacionados-275 MuiContainer-maxWidthLg"
         >
-          <a
-            className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-            href="www.itec.ufpa.br"
-            onBlur={[Function]}
-            onFocus={[Function]}
+          <div
+            className="MuiTypography-root makeStyles-textos-273 MuiTypography-body1"
           >
-            Site do Instituto de Tecnologia da UFPA (ITEC)
-          </a>
+            <a
+              className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="https://portal.ufpa.br/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              Universidade Federal do Pará (UFPA)
+            </a>
+          </div>
+          <div
+            className="MuiTypography-root makeStyles-textos-273 MuiTypography-body1"
+          >
+            <a
+              className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="http://www.itec.ufpa.br/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              Instituto de Tecnologia da UFPA (ITEC)
+            </a>
+          </div>
+          <div
+            className="MuiTypography-root makeStyles-textos-273 MuiTypography-body1"
+          >
+            <a
+              className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="https://www.ana.gov.br/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              Agência Nacional de Águas (ANA)
+            </a>
+          </div>
+          <div
+            className="MuiTypography-root makeStyles-textos-273 MuiTypography-body1"
+          >
+            <a
+              className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="http://portal.antaq.gov.br/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              Agencia Nacional de Transporte Aquaviário (ANTAQ)
+            </a>
+          </div>
+          <div
+            className="MuiTypography-root makeStyles-textos-273 MuiTypography-body1"
+          >
+            <a
+              className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="https://www.marinha.mil.br/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              Marinha do Brasil
+            </a>
+          </div>
+          <div
+            className="MuiTypography-root makeStyles-textos-273 MuiTypography-body1"
+          >
+            <a
+              className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+              href="https://www.marinha.mil.br/cpaor/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              Capitania dos Portos da Amazônia Oriental
+            </a>
+          </div>
         </div>
       </div>
+      <hr
+        className="MuiDivider-root MuiDivider-middle MuiDivider-flexItem MuiDivider-vertical"
+      />
       <div
-        className="MuiContainer-root makeStyles-secretariasContatosContainer-221 MuiContainer-maxWidthLg"
+        className="MuiContainer-root makeStyles-contatosFaculdadeContainer-278 MuiContainer-maxWidthLg"
       >
         <div
-          className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+          className="MuiTypography-root makeStyles-title-274 MuiTypography-body1"
         >
-          Contato da Secretaria de Graduação (Rubenson)
+          Contatos
         </div>
         <div
-          className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+          className="MuiContainer-root makeStyles-contatosFaculdade-277 MuiContainer-maxWidthLg"
         >
-          Contato da Secretaria de Pós-Graduação (Rubenson)
+          <div
+            className="MuiTypography-root makeStyles-textos-273 MuiTypography-body1"
+          >
+            Secretaria de Graduação: (91)998247565 (Rubenson)
+          </div>
+          <div
+            className="MuiTypography-root makeStyles-textos-273 MuiTypography-body1"
+          >
+            Secretaria de Pós-Graduação: (91)998247565 (Nayrama)
+          </div>
+          <p
+            className="MuiTypography-root makeStyles-textos-273 MuiTypography-body1"
+          >
+            Centro Acadêmico: (91)998247565 (Isabelly)
+          </p>
         </div>
       </div>
-      <p
-        className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
+      <hr
+        className="MuiDivider-root MuiDivider-middle MuiDivider-flexItem MuiDivider-vertical"
+      />
+      <div
+        className="MuiContainer-root makeStyles-enderecoContainer-280 MuiContainer-maxWidthLg"
       >
-        Endereço
-      </p>
-      <p
-        className="MuiTypography-root makeStyles-textos-222 MuiTypography-body1"
-      >
-        Centro Acadêmico
-      </p>
+        <p
+          className="MuiTypography-root makeStyles-title-274 MuiTypography-body1"
+        >
+          Endereço
+        </p>
+        <div
+          className="MuiContainer-root makeStyles-endereco-279 MuiContainer-maxWidthLg"
+        >
+          <p
+            className="MuiTypography-root makeStyles-textos-273 MuiTypography-body1"
+          >
+            Condomínio Fernando Guilhon BL. 10B APTO. 304
+          </p>
+        </div>
+      </div>
     </footer>
   </div>
 </div>

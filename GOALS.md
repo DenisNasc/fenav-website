@@ -1,11 +1,18 @@
 # Global Goals
 
+## [0.1.0] 15-05-2020
+
+- Adicionar responsividade ao Header e ao Footer
+- Revisar o que já foi feito no componente Homepage
+- Revisar o casos de testes
+- Estudar como testar links com a biblioteca de testes do React
+
 ## [0.1.0] 14-05-2020
 
-- Estudar sobre a diferença entre Test Renderer e Test Utilities na página do React
-- Criar casos de testes para o componente Footer
-- Começar a criar a Homepage
-- Refatorar os componentes já criados
+- Estudar sobre a diferença entre Test Renderer e Test Utilities na página do React **OK**
+- Criar casos de testes para o componente Footer **OK**
+- Começar a criar a Homepage **OK**
+- Refatorar os componentes já criados **OK**
 
 ## [0.1.0] 13-05-2020
 

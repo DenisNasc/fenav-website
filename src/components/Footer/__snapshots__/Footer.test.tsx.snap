@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component should match to the snapshot 1`] = `
+<footer
+  className="MuiPaper-root MuiAppBar-root makeStyles-footer-1 MuiAppBar-positionRelative MuiAppBar-colorSecondary MuiPaper-elevation0"
+>
+  <div
+    className="MuiContainer-root makeStyles-sitesRelacionadosContainer-5 MuiContainer-maxWidthLg"
+  >
+    <div
+      className="MuiTypography-root makeStyles-title-3 MuiTypography-body1"
+    >
+      Sites Relacionados
+    </div>
+    <div
+      className="MuiContainer-root makeStyles-sitesRelacionados-4 MuiContainer-maxWidthLg"
+    >
+      <div
+        className="MuiTypography-root makeStyles-textos-2 MuiTypography-body1"
+      >
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="https://portal.ufpa.br/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Universidade Federal do Pará (UFPA)
+        </a>
+      </div>
+      <div
+        className="MuiTypography-root makeStyles-textos-2 MuiTypography-body1"
+      >
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="http://www.itec.ufpa.br/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Instituto de Tecnologia da UFPA (ITEC)
+        </a>
+      </div>
+      <div
+        className="MuiTypography-root makeStyles-textos-2 MuiTypography-body1"
+      >
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="https://www.ana.gov.br/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Agência Nacional de Águas (ANA)
+        </a>
+      </div>
+      <div
+        className="MuiTypography-root makeStyles-textos-2 MuiTypography-body1"
+      >
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="http://portal.antaq.gov.br/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Agencia Nacional de Transporte Aquaviário (ANTAQ)
+        </a>
+      </div>
+      <div
+        className="MuiTypography-root makeStyles-textos-2 MuiTypography-body1"
+      >
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="https://www.marinha.mil.br/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Marinha do Brasil
+        </a>
+      </div>
+      <div
+        className="MuiTypography-root makeStyles-textos-2 MuiTypography-body1"
+      >
+        <a
+          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="https://www.marinha.mil.br/cpaor/"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          Capitania dos Portos da Amazônia Oriental
+        </a>
+      </div>
+    </div>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-middle MuiDivider-flexItem MuiDivider-vertical"
+  />
+  <div
+    className="MuiContainer-root makeStyles-contatosFaculdadeContainer-7 MuiContainer-maxWidthLg"
+  >
+    <div
+      className="MuiTypography-root makeStyles-title-3 MuiTypography-body1"
+    >
+      Contatos
+    </div>
+    <div
+      className="MuiContainer-root makeStyles-contatosFaculdade-6 MuiContainer-maxWidthLg"
+    >
+      <div
+        className="MuiTypography-root makeStyles-textos-2 MuiTypography-body1"
+      >
+        Secretaria de Graduação: (91)998247565 (Rubenson)
+      </div>
+      <div
+        className="MuiTypography-root makeStyles-textos-2 MuiTypography-body1"
+      >
+        Secretaria de Pós-Graduação: (91)998247565 (Nayrama)
+      </div>
+      <p
+        className="MuiTypography-root makeStyles-textos-2 MuiTypography-body1"
+      >
+        Centro Acadêmico: (91)998247565 (Isabelly)
+      </p>
+    </div>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-middle MuiDivider-flexItem MuiDivider-vertical"
+  />
+  <div
+    className="MuiContainer-root makeStyles-enderecoContainer-9 MuiContainer-maxWidthLg"
+  >
+    <p
+      className="MuiTypography-root makeStyles-title-3 MuiTypography-body1"
+    >
+      Endereço
+    </p>
+    <div
+      className="MuiContainer-root makeStyles-endereco-8 MuiContainer-maxWidthLg"
+    >
+      <p
+        className="MuiTypography-root makeStyles-textos-2 MuiTypography-body1"
+      >
+        Condomínio Fernando Guilhon BL. 10B APTO. 304
+      </p>
+    </div>
+  </div>
+</footer>
+`;

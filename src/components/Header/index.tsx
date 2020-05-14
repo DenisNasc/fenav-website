@@ -4,46 +4,6 @@ import {AppBar, Container, Tabs, Tab, Typography} from '@material-ui/core';
 
 import {ReactComponent as Logo} from '../../assets/icons/FENAV.svg';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    header: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      height: '70px',
-    },
-    container: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      width: '400px',
-      padding: '0px',
-      paddingLeft: '20px',
-      margin: '0px',
-    },
-    title: {
-      marginLeft: '60px',
-    },
-    logo: {
-      paddingBottom: '5px',
-      paddingLeft: '20px',
-      width: '60px',
-      height: '80px',
-    },
-    categoriesContainer: {
-      height: '100%',
-      display: 'flex',
-      paddingRight: '20px',
-      alignItems: 'center',
-    },
-    categorieButton: {
-      padding: '0px',
-      height: '70px',
-      marginRight: '5px',
-    },
-  })
-);
-
 const Header = () => {
   const [value, setValue] = useState<null | number>(null);
   const classes = useStyles();
@@ -132,3 +92,43 @@ const Header = () => {
 };
 
 export default Header;
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    header: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      height: '70px',
+    },
+    container: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      width: '400px',
+      padding: '0px',
+      paddingLeft: '20px',
+      margin: '0px',
+    },
+    title: {
+      marginLeft: '60px',
+    },
+    logo: {
+      paddingBottom: '5px',
+      paddingLeft: '20px',
+      width: '60px',
+      height: '80px',
+    },
+    categoriesContainer: {
+      height: '100%',
+      display: 'flex',
+      paddingRight: '20px',
+      alignItems: 'center',
+    },
+    categorieButton: {
+      padding: '0px',
+      height: '70px',
+      marginRight: '5px',
+    },
+  })
+);
