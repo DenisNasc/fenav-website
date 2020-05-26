@@ -1,5 +1,10 @@
 # Global Goals
 
+## [0.1.0] 27-05-2020
+
+- Fazer os testes para os componentes
+- Dar continuidade ao componente Homepage
+
 ## [0.1.0] 26-05-2020
 
 - Ajeitar o componente Header

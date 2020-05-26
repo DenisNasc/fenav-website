@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
 import {Grid} from '@material-ui/core';
 
@@ -11,17 +12,23 @@ const App = () => {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={0} className={classes.gridContainer}>
-      <Grid container item xs={12} className={classes.gridHeader}>
-        <Header />
+    <BrowserRouter>
+      <Grid container spacing={0} className={classes.gridContainer}>
+        <Grid container item xs={12} className={classes.gridHeader}>
+          <Header />
+        </Grid>
+        <Grid container item xs={12} className={classes.gridBody}>
+          <Switch>
+            <Route path="/">
+              <HomePage />
+            </Route>
+          </Switch>
+        </Grid>
+        <Grid container item xs={12} className={classes.gridFooter}>
+          <Footer />
+        </Grid>
       </Grid>
-      <Grid container item xs={12} className={classes.gridBody}>
-        <HomePage />
-      </Grid>
-      <Grid container item xs={12} className={classes.gridFooter}>
-        <Footer />
-      </Grid>
-    </Grid>
+    </BrowserRouter>
   );
 };
 
@@ -43,7 +50,6 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: 'calc(200vh - 70px - 80px)',
       border: '1px solid blue',
       [theme.breakpoints.down('xs')]: {
         height: 'calc(100vh - 70px - 120px)',

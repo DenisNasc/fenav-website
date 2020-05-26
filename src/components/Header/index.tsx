@@ -1,39 +1,31 @@
 import React, {useState, useEffect, useRef} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
+import {Link, useLocation} from 'react-router-dom';
 
-import {AppBar, IconButton, Menu, MenuItem, Tabs, Tab} from '@material-ui/core';
+import {AppBar, IconButton, Menu, MenuItem} from '@material-ui/core';
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
 import {Menu as MenuIcon} from '@material-ui/icons';
 
-import {HeaderReducer, HeaderReducerAction} from '../../redux/reducers/header/index.reducer';
+import {HeaderReducer} from '../../redux/reducers/header/index.reducer';
 import {Store} from '../../redux/store/types.store';
 
 import {ReactComponent as Logo} from '../../assets/icons/FENAV.svg';
 
 const Header = () => {
-  const dispatch = useDispatch();
+  const {pagesTitles} = useSelector<Store, HeaderReducer>(state => state.header);
 
-  const {tabValue} = useSelector<Store, HeaderReducer>(state => state.header);
+  const {pathname} = useLocation();
 
   const [menuAnchorElement, setMenuAnchorElement] = useState<null | HTMLElement>(null);
-  const [visibleTabs, setVisibleTabs] = useState<number>(6);
+  const [visiblePageTitles, setVisiblePageTitles] = useState<number>(6);
 
   const headerRef = useRef<HTMLButtonElement>(null);
 
   const classes = useStyles();
 
-  const pageTitles = [
-    'A Faculdade',
-    'Como Ingressar',
-    'Notícias',
-    'Publicações',
-    'Pós-Graduação',
-    'Área do Aluno',
-  ];
-
   useEffect(() => {
     if (headerRef.current?.clientWidth) {
-      handleVisibleTabs(headerRef.current?.clientWidth);
+      handleVisiblePageTitles(headerRef.current?.clientWidth);
     }
 
     let resizeTimeout: null | NodeJS.Timeout = null;
@@ -54,7 +46,7 @@ const Header = () => {
       console.log('resize', headerRef.current?.clientWidth);
 
       if (headerRef.current?.clientWidth) {
-        handleVisibleTabs(headerRef.current?.clientWidth);
+        handleVisiblePageTitles(headerRef.current?.clientWidth);
       }
     };
 
@@ -62,13 +54,8 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    if (typeof tabValue !== 'number') {
-      document.title = 'FENAV – Faculdade de Engenharia Naval';
-      return;
-    }
-
-    document.title = `${pageTitles[tabValue]} – FENAV`;
-  }, [tabValue]);
+    document.title = `${pathname} - FENAV`;
+  }, [pathname]);
 
   const a11yProps = (index: any) => {
     return {
@@ -77,32 +64,32 @@ const Header = () => {
     };
   };
 
-  const handleVisibleTabs = (headerWidth: number) => {
+  const handleVisiblePageTitles = (headerWidth: number) => {
     if (headerWidth >= 1320) {
-      setVisibleTabs(6);
+      setVisiblePageTitles(6);
       return;
     }
     if (headerWidth < 1320 && headerWidth >= 1160) {
-      setVisibleTabs(5);
+      setVisiblePageTitles(5);
       return;
     }
     if (headerWidth < 1160 && headerWidth >= 1020) {
-      setVisibleTabs(4);
+      setVisiblePageTitles(4);
       return;
     }
     if (headerWidth < 1020 && headerWidth >= 880) {
-      setVisibleTabs(3);
+      setVisiblePageTitles(3);
       return;
     }
     if (headerWidth < 880 && headerWidth >= 720) {
-      setVisibleTabs(2);
+      setVisiblePageTitles(2);
       return;
     }
     if (headerWidth < 720 && headerWidth >= 600) {
-      setVisibleTabs(1);
+      setVisiblePageTitles(1);
       return;
     }
-    setVisibleTabs(0);
+    setVisiblePageTitles(0);
     return;
   };
 
@@ -114,47 +101,30 @@ const Header = () => {
     setMenuAnchorElement(null);
   };
 
-  const handleClickMenu = (tabValue: number) => {
+  const handleClickMenu = () => {
     setMenuAnchorElement(null);
-
-    const action: HeaderReducerAction = {
-      type: 'SET_TABVALUE',
-      payload: {tabValue},
-    };
-
-    dispatch(action);
-  };
-
-  const handleTabsChange = (event: React.ChangeEvent<{}>, tabValue: number) => {
-    const action: HeaderReducerAction = {
-      type: 'SET_TABVALUE',
-      payload: {tabValue},
-    };
-
-    dispatch(action);
   };
 
   return (
     <AppBar data-testid="Header" className={classes.header} position="fixed" ref={headerRef}>
       <Logo className={classes.logo} />
 
-      <Tabs
-        classes={{root: classes.tabsContainer}}
-        value={tabValue}
-        onChange={handleTabsChange}
-        aria-label="simple tabs"
-      >
-        {pageTitles
-          .filter((_, i) => i + 1 <= visibleTabs)
-          .map((e, i) => (
-            <Tab
-              key={e}
-              classes={{root: classes.tab}}
-              data-testid={`categorie-${i + 1}`}
-              label={e}
-              {...a11yProps(i)}
-            />
-          ))}
+      <nav className={classes.nav}>
+        <ul className={classes.ul} aria-label="simple tabs">
+          {pagesTitles
+            .filter((_, i) => i + 1 <= visiblePageTitles)
+            .map((e, i) => (
+              <Link
+                key={e}
+                className={classes.link}
+                to={`/${e}`}
+                data-testid={`categorie-${i + 1}`}
+                {...a11yProps(i)}
+              >
+                {e}
+              </Link>
+            ))}
+        </ul>
 
         <div className={classes.menu}>
           <IconButton
@@ -168,19 +138,27 @@ const Header = () => {
             id="simple-menu"
             anchorEl={menuAnchorElement}
             keepMounted
+            classes={{paper: classes.menuPopover}}
             open={Boolean(menuAnchorElement)}
             onClose={handleMenuClose}
           >
-            {pageTitles
-              .filter((_, i) => i + 1 > visibleTabs)
+            {pagesTitles
+              .filter((_, i) => i + 1 > visiblePageTitles)
               .map((e, i) => (
-                <MenuItem key={e} onClick={() => handleClickMenu(visibleTabs + i)}>
-                  {e}
+                <MenuItem key={e} onClick={handleClickMenu}>
+                  <Link
+                    to={`/${e}`}
+                    className={classes.link}
+                    {...a11yProps(i + visiblePageTitles)}
+                    data-testid={`categorie-${i + visiblePageTitles + 1}`}
+                  >
+                    {e}
+                  </Link>
                 </MenuItem>
               ))}
           </Menu>
         </div>
-      </Tabs>
+      </nav>
     </AppBar>
   );
 };
@@ -205,16 +183,27 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '60px',
       height: '80px',
     },
-    tabsContainer: {
-      height: '100%',
+    nav: {
+      height: '80px',
       display: 'flex',
       alignItems: 'center',
     },
-    tab: {
+    ul: {
+      height: '100%',
+      padding: '0px',
+      display: 'flex',
+      alignItems: 'center',
+    },
+    link: {
       padding: '0px',
       minWidth: '0px',
       width: '140px',
-      marginRight: '5px',
+      textAlign: 'center',
+      color: 'white',
+      textDecoration: 'none',
+      '&:hover': {
+        color: 'black',
+      },
     },
     menu: {
       display: 'none',
@@ -225,6 +214,10 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '60px',
         height: '48px',
       },
+    },
+    menuPopover: {
+      marginTop: '30px',
+      backgroundColor: 'grey',
     },
   })
 );
