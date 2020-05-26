@@ -1,12 +1,20 @@
 import React, {useState, useEffect, useRef} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+
 import {AppBar, IconButton, Menu, MenuItem, Tabs, Tab} from '@material-ui/core';
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
 import {Menu as MenuIcon} from '@material-ui/icons';
 
+import {HeaderReducer, HeaderReducerAction} from '../../redux/reducers/header/index.reducer';
+import {Store} from '../../redux/store/types.store';
+
 import {ReactComponent as Logo} from '../../assets/icons/FENAV.svg';
 
 const Header = () => {
-  const [value, setValue] = useState<null | number>(null);
+  const dispatch = useDispatch();
+
+  const {tabValue} = useSelector<Store, HeaderReducer>(state => state.header);
+
   const [menuAnchorElement, setMenuAnchorElement] = useState<null | HTMLElement>(null);
   const [visibleTabs, setVisibleTabs] = useState<number>(6);
 
@@ -54,13 +62,13 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    if (typeof value !== 'number') {
+    if (typeof tabValue !== 'number') {
       document.title = 'FENAV – Faculdade de Engenharia Naval';
       return;
     }
 
-    document.title = `${pageTitles[value]} – FENAV`;
-  }, [value]);
+    document.title = `${pageTitles[tabValue]} – FENAV`;
+  }, [tabValue]);
 
   const a11yProps = (index: any) => {
     return {
@@ -106,8 +114,24 @@ const Header = () => {
     setMenuAnchorElement(null);
   };
 
-  const handleTabsChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setValue(newValue);
+  const handleClickMenu = (tabValue: number) => {
+    setMenuAnchorElement(null);
+
+    const action: HeaderReducerAction = {
+      type: 'SET_TABVALUE',
+      payload: {tabValue},
+    };
+
+    dispatch(action);
+  };
+
+  const handleTabsChange = (event: React.ChangeEvent<{}>, tabValue: number) => {
+    const action: HeaderReducerAction = {
+      type: 'SET_TABVALUE',
+      payload: {tabValue},
+    };
+
+    dispatch(action);
   };
 
   return (
@@ -116,7 +140,7 @@ const Header = () => {
 
       <Tabs
         classes={{root: classes.tabsContainer}}
-        value={value || 0}
+        value={tabValue}
         onChange={handleTabsChange}
         aria-label="simple tabs"
       >
@@ -149,8 +173,8 @@ const Header = () => {
           >
             {pageTitles
               .filter((_, i) => i + 1 > visibleTabs)
-              .map(e => (
-                <MenuItem key={e} onClick={handleMenuClose}>
+              .map((e, i) => (
+                <MenuItem key={e} onClick={() => handleClickMenu(visibleTabs + i)}>
                   {e}
                 </MenuItem>
               ))}

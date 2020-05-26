@@ -13,63 +13,18 @@ const Footer = () => {
       position="relative"
     >
       <Container className={classes.sitesRelacionadosContainer}>
-        <Typography component="div" className={classes.title}>
-          Sites Relacionados
+        <Typography classes={{root: classes.textos}}>
+          Endereço UFPA, no 4 portão, depois da ponte, caminhar por uma estrada que aparentemente
+          leva a lugar algum
         </Typography>
-        <Container className={classes.sitesRelacionados}>
-          <Typography component="div" className={classes.textos}>
-            <Link href="https://portal.ufpa.br/">Universidade Federal do Pará (UFPA)</Link>
-          </Typography>
-          <Typography component="div" className={classes.textos}>
-            <Link href="http://www.itec.ufpa.br/">Instituto de Tecnologia da UFPA (ITEC)</Link>
-          </Typography>
-          <Typography component="div" className={classes.textos}>
-            <Link href="https://www.ana.gov.br/">Agência Nacional de Águas (ANA)</Link>
-          </Typography>
-          <Typography component="div" className={classes.textos}>
-            <Link href="http://portal.antaq.gov.br/">
-              Agencia Nacional de Transporte Aquaviário (ANTAQ)
-            </Link>
-          </Typography>
-          <Typography component="div" className={classes.textos}>
-            <Link href="https://www.marinha.mil.br/">Marinha do Brasil</Link>
-          </Typography>
-          <Typography component="div" className={classes.textos}>
-            <Link href="https://www.marinha.mil.br/cpaor/">
-              Capitania dos Portos da Amazônia Oriental
-            </Link>
-          </Typography>
-        </Container>
-      </Container>
-
-      <Divider orientation="vertical" flexItem variant="middle" />
-
-      <Container className={classes.contatosFaculdadeContainer}>
-        <Typography component="div" className={classes.title}>
-          Contatos
+        <Typography classes={{root: classes.textos}}>
+          Secretaria de graduação: (91)998247565 [Rubenson]
         </Typography>
-        <Container className={classes.contatosFaculdade}>
-          <Typography component="div" className={classes.textos}>
-            Secretaria de Graduação: (91)998247565 (Rubenson)
-          </Typography>
-          <Typography component="div" className={classes.textos}>
-            Secretaria de Pós-Graduação: (91)998247565 (Nayrama)
-          </Typography>
-          <Typography className={classes.textos}>
-            Centro Acadêmico: (91)998247565 (Isabelly)
-          </Typography>
-        </Container>
-      </Container>
-
-      <Divider orientation="vertical" flexItem variant="middle" />
-
-      <Container className={classes.enderecoContainer}>
-        <Typography className={classes.title}>Endereço</Typography>
-        <Container className={classes.endereco}>
-          <Typography className={classes.textos}>
-            Condomínio Fernando Guilhon BL. 10B APTO. 304
-          </Typography>
-        </Container>
+        <Typography classes={{root: classes.textos}}>
+          Secretaria de pós-graduação: (91)998247565 [Nayrama]
+        </Typography>
+        <Typography classes={{root: classes.textos}}>E-mail: dncnaval@gmail.com</Typography>
+        <Typography classes={{root: classes.textos}}>Universidade Federal do Pará</Typography>
       </Container>
     </AppBar>
   );
@@ -93,65 +48,11 @@ const useStyles = makeStyles((theme: Theme) =>
     textos: {
       fontSize: '12px',
     },
-    title: {
-      fontSize: '16px',
-    },
-    sitesRelacionados: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      justifyContent: 'center',
-      height: '50px',
-      width: '100%',
-      margin: '0px',
-      padding: '0px',
-    },
     sitesRelacionadosContainer: {
       display: 'flex',
       flexDirection: 'column',
       height: '100%',
       width: '800px',
-      margin: '0px',
-      padding: '0px',
-    },
-
-    contatosFaculdade: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      justifyContent: 'center',
-      height: '50px',
-      width: '100%',
-      margin: '0px',
-      padding: '0px',
-    },
-    contatosFaculdadeContainer: {
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100%',
-      width: '650px',
-      margin: '0px',
-      padding: '0px',
-    },
-
-    endereco: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      justifyContent: 'center',
-      height: '50px',
-      width: '100%',
-      margin: '0px',
-      padding: '0px',
-    },
-    enderecoContainer: {
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100%',
-      width: '300px',
       margin: '0px',
       padding: '0px',
     },

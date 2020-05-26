@@ -19,7 +19,7 @@ const App = () => {
         <HomePage />
       </Grid>
       <Grid container item xs={12} className={classes.gridFooter}>
-        {/* <Footer /> */}
+        <Footer />
       </Grid>
     </Grid>
   );
@@ -43,14 +43,14 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: 'calc(100vh - 70px - 80px)',
+      height: 'calc(200vh - 70px - 80px)',
       border: '1px solid blue',
       [theme.breakpoints.down('xs')]: {
         height: 'calc(100vh - 70px - 120px)',
       },
     },
     gridFooter: {
-      height: '80px',
+      height: '100px',
       border: '1px solid red',
       [theme.breakpoints.down('xs')]: {
         height: '120px',

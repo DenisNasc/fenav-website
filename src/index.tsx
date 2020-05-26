@@ -4,6 +4,9 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
+import {Provider} from 'react-redux';
+import store from './redux/store/index.store';
+
 import {ThemeProvider} from '@material-ui/core';
 import {createMuiTheme} from '@material-ui/core/styles';
 
@@ -25,7 +28,9 @@ const fenavWebsiteTheme = createMuiTheme({
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={fenavWebsiteTheme}>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
