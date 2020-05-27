@@ -11,33 +11,37 @@ import {
   Button,
 } from '@material-ui/core';
 
-const NewsCard = () => {
+interface INewCard {
+  imageURL: string;
+  title: string;
+  shortDescription: string;
+  alt: string;
+}
+
+const NewsCard = (props: INewCard) => {
+  const {alt, imageURL, title, shortDescription} = props;
   const classes = useStyles();
 
   return (
     <Card className={classes.newsCard}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          src="/home/denis/Documentos/Developer/Projects/fenav-site/src/assets/img/teste.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
+      <CardActionArea className={classes.actionArea}>
+        <CardMedia className={classes.media} image={imageURL} title={alt} />
+        <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {shortDescription}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+
+      <CardActions className={classes.actions}>
         <Button size="small" color="primary">
-          Share
+          Compartilhar
         </Button>
         <Button size="small" color="primary">
-          Learn More
+          Leia mais
         </Button>
       </CardActions>
     </Card>
@@ -54,7 +58,16 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: '0px',
     },
     media: {
-      height: '100%',
+      height: '85%',
+    },
+    content: {
+      height: '15%',
+    },
+    actionArea: {
+      height: '90%',
+    },
+    actions: {
+      height: '10%',
     },
   })
 );

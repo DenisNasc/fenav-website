@@ -24,9 +24,9 @@ const App = () => {
             </Route>
           </Switch>
         </Grid>
-        <Grid container item xs={12} className={classes.gridFooter}>
+        {/* <Grid container item xs={12} className={classes.gridFooter}>
           <Footer />
-        </Grid>
+        </Grid> */}
       </Grid>
     </BrowserRouter>
   );
@@ -51,9 +51,8 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
       alignItems: 'center',
       border: '1px solid blue',
-      [theme.breakpoints.down('xs')]: {
-        height: 'calc(100vh - 70px - 120px)',
-      },
+      height: 'calc(100vh - 70px)',
+      [theme.breakpoints.down('xs')]: {},
     },
     gridFooter: {
       height: '100px',

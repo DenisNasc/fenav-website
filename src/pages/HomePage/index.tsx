@@ -1,15 +1,69 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
 import {Tabs, Tab, Grid, Typography} from '@material-ui/core';
-import {Phone as PhoneIcon} from '@material-ui/icons';
 
 import TabPanel from './components/TabPanel';
 import NewsCard from './components/NewsCard';
 
+const newsStates = [
+  {
+    title: 'Noticia 1',
+    imageURL: 'https://www.santaportal.com.br/sistema/Arquivos/Fotos/2020210295211g.jpg',
+    description: 'Nova balsa é construida no estaleiro do Rio Maguari',
+  },
+  {
+    title: 'Noticia 2',
+    imageURL:
+      'https://www.ship-technology.com/wp-content/uploads/sites/16/2020/01/b600257f2819a5b2_800x800ar.jpg',
+    description: 'Novo propulsor é inventado!',
+  },
+  {
+    title: 'Noticia 3',
+    imageURL: 'https://cargapesada.com.br/wp-content/uploads/2017/04/4-2.jpg',
+    description: 'Alunos ganham prêmio de ciência',
+  },
+  {
+    title: 'Noticia 4',
+    imageURL:
+      'https://www.transportabrasil.com.br/wp-content/uploads/2017/05/porto-santos-movimento.jpg',
+    description: 'O DUNA (Desafio Universitário de Nautdesign) será semana que vem',
+  },
+  {
+    title: 'Noticia 5',
+    imageURL:
+      'https://canaldoensino.com.br/blog/wp-content/uploads/2018/03/como-conseguir-uma-bolsa-de-estudo-integral-numa-universidade-privada_Prancheta-1.jpg',
+    description: 'As aulas começarão dia 27/06',
+  },
+  {
+    title: 'Noticia 6',
+    imageURL: 'https://m.migalhas.com.br/imagem/881996909B4BF7C633CD14D612D963A8F828_formatura.jpg',
+    description: 'Parabéns ao novos formandos',
+  },
+  {title: 'Noticia 7', imageURL: '', description: 'UFPA divulga resultados do PS 2020'},
+];
+
 const Home = () => {
   const [value, setValue] = useState(0);
   const classes = useStyles();
+
+  useEffect(() => {
+    const passNews = () => {
+      return setInterval(() => {
+        setValue(value => {
+          if (value === 5) {
+            return 0;
+          }
+
+          return ++value;
+        });
+      }, 5000);
+    };
+
+    const interval = passNews();
+
+    return () => clearInterval(interval);
+  }, []);
 
   const a11yProps = (index: any) => {
     return {
@@ -25,7 +79,7 @@ const Home = () => {
   return (
     <Grid container spacing={0} className={classes.homepageGrid}>
       <Grid container item xs={6} className={classes.homepageGridLeft}>
-        <section>
+        <aside className={classes.aside}>
           <div className={classes.titleSubtitle}>
             <Typography variant="h4">Faculdade de Engenharia Naval</Typography>
             <Typography variant="h5">Universidade Federal do Pará</Typography>
@@ -36,13 +90,11 @@ const Home = () => {
             exercitationem non, magni architecto voluptatibus omnis ratione quos aliquam
             consequuntur neque impedit, praesentium quod nam placeat dolor molestias?
           </Typography>
-        </section>
+        </aside>
+        <footer className={classes.homepageFooter}>Aqui é o rodapé da página</footer>
       </Grid>
-      <Grid container item xs={6} className={classes.homepageGridRight}>
-        <Typography className={classes.titleRight} variant="h5">
-          Notícias
-        </Typography>
 
+      <Grid container item xs={6} className={classes.homepageGridRight}>
         <div className={classes.tabsContainer}>
           <Tabs
             value={value}
@@ -54,33 +106,26 @@ const Home = () => {
             textColor="primary"
             aria-label="scrollable force tabs example"
           >
-            <Tab label="Item One" icon={<PhoneIcon />} {...a11yProps(0)} />
-            <Tab label="Item Two" icon={<PhoneIcon />} {...a11yProps(1)} />
-            <Tab label="Item Three" icon={<PhoneIcon />} {...a11yProps(2)} />
-            <Tab label="Item Four" icon={<PhoneIcon />} {...a11yProps(3)} />
-            <Tab label="Item Five" icon={<PhoneIcon />} {...a11yProps(4)} />
-            <Tab label="Item Six" icon={<PhoneIcon />} {...a11yProps(5)} />
+            {newsStates
+              .filter((_, i) => i < 6)
+              .map((e, i) => (
+                <Tab key={e.title} label={e.title} {...a11yProps(i)} />
+              ))}
           </Tabs>
 
           <div className={classes.newsContainer}>
-            <TabPanel value={value} index={0}>
-              <NewsCard />
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-              Page Two
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-              <NewsCard />
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-              Page Four
-            </TabPanel>
-            <TabPanel value={value} index={4}>
-              <NewsCard />
-            </TabPanel>
-            <TabPanel value={value} index={5}>
-              Page Six
-            </TabPanel>
+            {newsStates
+              .filter((_, i) => i < 6)
+              .map((e, i) => (
+                <TabPanel key={e.title} value={value} index={i}>
+                  <NewsCard
+                    alt={e.title}
+                    title={e.title}
+                    imageURL={e.imageURL}
+                    shortDescription={e.description}
+                  />
+                </TabPanel>
+              ))}
           </div>
         </div>
       </Grid>
@@ -93,10 +138,19 @@ export default Home;
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     homepageGrid: {
-      height: '4000px',
+      height: '100%',
     },
     homepageGridLeft: {
       padding: '20px',
+      height: '100%',
+    },
+    aside: {
+      height: 'calc(100% - 120px)',
+    },
+    homepageFooter: {
+      height: '120px',
+      width: '100%',
+      backgroundColor: 'red',
     },
     homepageGridRight: {
       display: 'flex',
@@ -111,12 +165,11 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: '12px',
     },
     tabsContainer: {
-      height: '70vh',
+      height: '80vh',
       width: '100%',
     },
     tabs: {
-      marginBottom: '20px',
-      backgroundColor: 'grey',
+      // backgroundColor: 'grey',
     },
     titleRight: {
       paddingTop: '42px',
