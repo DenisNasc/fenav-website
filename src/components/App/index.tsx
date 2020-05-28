@@ -36,24 +36,11 @@ export default App;
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    gridContainer: {
-      height: '100vh',
-    },
+    gridContainer: {},
     gridHeader: {
       height: '70px',
-      border: '1px solid green',
-      [theme.breakpoints.down('xs')]: {
-        height: '70px',
-      },
     },
-    gridBody: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      border: '1px solid blue',
-      height: 'calc(100vh - 70px)',
-      [theme.breakpoints.down('xs')]: {},
-    },
+    gridBody: {},
     gridFooter: {
       height: '100px',
       border: '1px solid red',

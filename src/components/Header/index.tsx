@@ -106,7 +106,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar data-testid="Header" className={classes.header} position="fixed" ref={headerRef}>
+    <AppBar data-testid="Header" className={classes.header} position="relative" ref={headerRef}>
       <Logo className={classes.logo} />
 
       <nav className={classes.nav}>
@@ -168,10 +168,11 @@ export default Header;
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     header: {
+      display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
-      height: '70px',
+      height: '100%',
       padding: '0px 100px',
       [theme.breakpoints.down(450)]: {
         padding: '0px',
@@ -184,7 +185,7 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '80px',
     },
     nav: {
-      height: '80px',
+      height: '100%',
       display: 'flex',
       alignItems: 'center',
     },

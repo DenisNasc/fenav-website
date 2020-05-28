@@ -1,24 +1,16 @@
 import React from 'react';
 
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
-import {
-  Card,
-  CardActions,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-  Typography,
-  Button,
-} from '@material-ui/core';
+import {Card, CardActionArea, CardMedia, CardContent, Typography} from '@material-ui/core';
 
-interface INewCard {
+interface NewCardProps {
   imageURL: string;
   title: string;
   shortDescription: string;
   alt: string;
 }
 
-const NewsCard = (props: INewCard) => {
+const NewsCard = (props: NewCardProps) => {
   const {alt, imageURL, title, shortDescription} = props;
   const classes = useStyles();
 
@@ -35,15 +27,6 @@ const NewsCard = (props: INewCard) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-
-      <CardActions className={classes.actions}>
-        <Button size="small" color="primary">
-          Compartilhar
-        </Button>
-        <Button size="small" color="primary">
-          Leia mais
-        </Button>
-      </CardActions>
     </Card>
   );
 };
@@ -53,21 +36,30 @@ export default NewsCard;
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     newsCard: {
+      borderRadius: '0px',
+      boxShadow: 'none',
+      height: 'calc(100vh - 70px - 20px - 48px)',
       width: '100%',
-      height: '100%',
       padding: '0px',
+      [theme.breakpoints.down(450)]: {
+        height: '300px',
+      },
     },
     media: {
       height: '85%',
+      [theme.breakpoints.down(450)]: {
+        height: '200px',
+      },
     },
     content: {
       height: '15%',
+      [theme.breakpoints.down(450)]: {
+        height: '100px',
+        borderBottom: '1px solid black',
+      },
     },
     actionArea: {
-      height: '90%',
-    },
-    actions: {
-      height: '10%',
+      height: '100%',
     },
   })
 );

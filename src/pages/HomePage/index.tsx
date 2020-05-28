@@ -77,7 +77,7 @@ const Home = () => {
   };
 
   return (
-    <Grid container spacing={0} className={classes.homepageGrid}>
+    <Grid container item spacing={0} className={classes.homepageGrid}>
       <Grid container item xs={6} className={classes.homepageGridLeft}>
         <aside className={classes.aside}>
           <div className={classes.titleSubtitle}>
@@ -85,13 +85,31 @@ const Home = () => {
             <Typography variant="h5">Universidade Federal do Pará</Typography>
           </div>
 
-          <Typography className={classes.body} variant="body1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fuga rem ipsam,
-            exercitationem non, magni architecto voluptatibus omnis ratione quos aliquam
-            consequuntur neque impedit, praesentium quod nam placeat dolor molestias?
-          </Typography>
+          <section>
+            <Typography className={classes.body} variant="body1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fuga rem ipsam,
+              exercitationem non, magni architecto voluptatibus omnis ratione quos aliquam
+              consequuntur neque impedit, praesentium quod nam placeat dolor molestias?
+            </Typography>
+          </section>
+
+          <div className={classes.contacts}>
+            <Typography>Secretaria de graduação: (91)998247565</Typography>
+            <Typography>Secretaria de pós-graduação: (91)998247565</Typography>
+            <Typography>Centro acadêmico</Typography>
+            <Typography>
+              Universidade Federal do Pará (UFPA) | Instituto de Tecnologia (ITEC)
+            </Typography>
+          </div>
+
+          <section>
+            <Typography className={classes.body} variant="body1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fuga rem ipsam,
+              exercitationem non, magni architecto voluptatibus omnis ratione quos aliquam
+              consequuntur neque impedit, praesentium quod nam placeat dolor molestias?
+            </Typography>
+          </section>
         </aside>
-        <footer className={classes.homepageFooter}>Aqui é o rodapé da página</footer>
       </Grid>
 
       <Grid container item xs={6} className={classes.homepageGridRight}>
@@ -138,26 +156,48 @@ export default Home;
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     homepageGrid: {
-      height: '100%',
+      height: 'calc(100vh - 70px)',
+      width: '100vw',
+      [theme.breakpoints.down(450)]: {
+        flexWrap: 'nowrap',
+        flexDirection: 'column-reverse',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+      },
     },
     homepageGridLeft: {
+      display: 'flex',
       padding: '20px',
+      paddingBottom: '0px',
       height: '100%',
+      flexDirection: 'column',
+      [theme.breakpoints.down(450)]: {
+        maxWidth: '100vw',
+        maxHeight: 'calc(100vh - 48px - 70px)',
+        overflowY: 'scroll',
+      },
     },
+
+    homepageGridRight: {
+      height: '100%',
+      paddingTop: '20px',
+      [theme.breakpoints.down(450)]: {
+        maxWidth: '100vw',
+        padding: '0px',
+        borderTop: '1px solid black',
+      },
+    },
+
     aside: {
       height: 'calc(100% - 120px)',
     },
-    homepageFooter: {
+    contacts: {
       height: '120px',
       width: '100%',
-      backgroundColor: 'red',
+      border: '1px solid black',
+      margin: '10px 0',
     },
-    homepageGridRight: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'flex-start',
-      padding: '20px',
-    },
+
     titleSubtitle: {
       borderBottom: '1px solid black',
     },
@@ -165,17 +205,11 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: '12px',
     },
     tabsContainer: {
-      height: '80vh',
       width: '100%',
     },
     tabs: {
-      // backgroundColor: 'grey',
+      height: '48px',
     },
-    titleRight: {
-      paddingTop: '42px',
-    },
-    newsContainer: {
-      height: '100%',
-    },
+    newsContainer: {},
   })
 );
