@@ -46,8 +46,10 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     media: {
+      minHeight: '550px',
       height: '85%',
       [theme.breakpoints.down(450)]: {
+        minHeight: '0px',
         height: '200px',
       },
     },

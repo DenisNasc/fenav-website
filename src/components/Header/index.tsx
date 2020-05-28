@@ -54,7 +54,10 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    document.title = `${pathname} - FENAV`;
+    if (pathname === '/') {
+      document.title = `Faculdade de Engenharia Naval - FENAV`;
+      return;
+    }
   }, [pathname]);
 
   const a11yProps = (index: any) => {

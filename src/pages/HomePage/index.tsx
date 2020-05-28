@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import {makeStyles, createStyles, Theme} from '@material-ui/core/styles';
-import {Tabs, Tab, Grid, Typography} from '@material-ui/core';
+import {Card, CardContent, Tabs, Tab, Grid, Typography} from '@material-ui/core';
 
 import TabPanel from './components/TabPanel';
 import NewsCard from './components/NewsCard';
@@ -81,34 +81,49 @@ const Home = () => {
       <Grid container item xs={6} className={classes.homepageGridLeft}>
         <aside className={classes.aside}>
           <div className={classes.titleSubtitle}>
-            <Typography variant="h4">Faculdade de Engenharia Naval</Typography>
-            <Typography variant="h5">Universidade Federal do Pará</Typography>
-          </div>
-
-          <section>
-            <Typography className={classes.body} variant="body1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fuga rem ipsam,
-              exercitationem non, magni architecto voluptatibus omnis ratione quos aliquam
-              consequuntur neque impedit, praesentium quod nam placeat dolor molestias?
+            <Typography className={classes.title} variant="h4">
+              Faculdade de Engenharia Naval
             </Typography>
-          </section>
-
-          <div className={classes.contacts}>
-            <Typography>Secretaria de graduação: (91)998247565</Typography>
-            <Typography>Secretaria de pós-graduação: (91)998247565</Typography>
-            <Typography>Centro acadêmico</Typography>
-            <Typography>
-              Universidade Federal do Pará (UFPA) | Instituto de Tecnologia (ITEC)
+            <Typography className={classes.subtitle} variant="h5">
+              Universidade Federal do Pará
             </Typography>
           </div>
 
           <section>
-            <Typography className={classes.body} variant="body1">
+            <Typography className={classes.sectionParagraf} variant="body1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fuga rem ipsam,
               exercitationem non, magni architecto voluptatibus omnis ratione quos aliquam
-              consequuntur neque impedit, praesentium quod nam placeat dolor molestias?
+              consequuntur neque impedit, praesentium quod nam placeat dolor molestias? Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Error fuga rem ipsam, exercitationem non,
+              magni architecto voluptatibus omnis ratione quos aliquam consequuntur neque impedit,
+              praesentium quod nam placeat dolor molestias?Lorem ipsum dolor sit amet consectetur
+              dolor sit amet consectetur adipisicing elit. Error fuga rem ipsam, exercitationem non,
+              magni architecto voluptatibus omnis ratione quos aliquam consequuntur neque impedit,
+              praesentium quod nam placeat dolor molestias?Lorem ipsum dolor sit amet consectetur
             </Typography>
           </section>
+          <div className={classes.fenavHomepage} />
+          <section>
+            <Typography className={classes.sectionParagraf} variant="body1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error fuga rem ipsam,
+              exercitationem non, magni architecto voluptatibus omnis ratione quos aliquam
+              consequuntur neque impedit, praesentium quod nam placeat dolor molestias?Lorem ipsum
+            </Typography>
+          </section>
+
+          <Card className={classes.cardContacts}>
+            <CardContent className={classes.cardContactsContent}>
+              <Typography className={classes.contactsContent}>
+                Secretaria de graduação: (91)998247565
+              </Typography>
+              <Typography className={classes.contactsContent}>
+                Secretaria de pós-graduação: (91)998247565
+              </Typography>
+              <Typography className={classes.contactsContent}>
+                Centro acadêmico: (91)998247565 | deni.12345@hotmail.com
+              </Typography>
+            </CardContent>
+          </Card>
         </aside>
       </Grid>
 
@@ -187,22 +202,56 @@ const useStyles = makeStyles((theme: Theme) =>
         borderTop: '1px solid black',
       },
     },
-
     aside: {
-      height: 'calc(100% - 120px)',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
     },
-    contacts: {
-      height: '120px',
-      width: '100%',
-      border: '1px solid black',
-      margin: '10px 0',
+    cardContacts: {
+      width: '60%',
+      minWidth: '370px',
+      marginTop: '10px',
+      marginBottom: '5px',
+      backgroundColor: 'red',
+      alignSelf: 'center',
     },
-
+    cardContactsContent: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    contactsContent: {
+      fontSize: '10pt',
+      [theme.breakpoints.down(450)]: {
+        fontSize: '8pt',
+      },
+    },
     titleSubtitle: {
       borderBottom: '1px solid black',
     },
-    body: {
+
+    title: {
+      [theme.breakpoints.down(450)]: {
+        fontSize: '16pt',
+      },
+    },
+    subtitle: {
+      [theme.breakpoints.down(450)]: {
+        fontSize: '14pt',
+      },
+    },
+    sectionParagraf: {
       marginTop: '12px',
+      textAlign: 'justify',
+      // maxWidth: 'calc(100% - 40px)',
+      [theme.breakpoints.down(450)]: {
+        fontSize: '10pt',
+      },
+    },
+    fenavHomepage: {
+      height: '300px',
+      backgroundImage: 'url(https://www.portal.ufpa.br/images/Portal_2019/Eng_Naval_1.jpg)',
     },
     tabsContainer: {
       width: '100%',
